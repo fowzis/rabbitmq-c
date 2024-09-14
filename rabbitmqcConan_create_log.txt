@@ -1,0 +1,291 @@
+fowzis@4GC41F3:~/projects/rabbitmq-c$ conan create . --build=missing
+
+======== Exporting recipe to the cache ========
+rabbitmq-c/0.14.0: Exporting package recipe: /home/fowzis/projects/rabbitmq-c/conanfile.py
+rabbitmq-c/0.14.0: Copied 2 '.py' files: conanfile.py, codegen.py
+rabbitmq-c/0.14.0: Copied 3 '.txt' files: CMakeLists.txt, CMakeLists.txt, CMakeLists.txt
+rabbitmq-c/0.14.0: Copied 3 '.in' files: librabbitmq.pc.in, rabbitmq-c-config.cmake.in, config.h.in
+rabbitmq-c/0.14.0: Copied 15 '.h' files
+rabbitmq-c/0.14.0: Copied 1 '.expected' file: test_tables.expected
+rabbitmq-c/0.14.0: Copied 19 '.c' files
+rabbitmq-c/0.14.0: Copied 3 '.cmake' files: FindPOPT.cmake, VersionFunctions.cmake, FindXMLTO.cmake
+rabbitmq-c/0.14.0: Copied 1 file: COPYING-CMAKE-SCRIPTS
+rabbitmq-c/0.14.0: Exported to cache folder: /home/fowzis/.conan2/p/rabbid1ec52ff33b61/e
+rabbitmq-c/0.14.0: Exported: rabbitmq-c/0.14.0#084cb096df6de4fd9f8db3d20fc7af4e (2024-09-14 15:01:40 UTC)
+
+======== Input profiles ========
+Profile host:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=gcc
+compiler.cppstd=gnu17
+compiler.libcxx=libstdc++11
+compiler.version=11
+os=Linux
+[conf]
+tools.files.download:verify=False
+
+Profile build:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=gcc
+compiler.cppstd=gnu17
+compiler.libcxx=libstdc++11
+compiler.version=11
+os=Linux
+[conf]
+tools.files.download:verify=False
+
+
+======== Computing dependency graph ========
+Graph root
+    cli
+Requirements
+    rabbitmq-c/0.14.0#084cb096df6de4fd9f8db3d20fc7af4e - Cache
+
+======== Computing necessary packages ========
+rabbitmq-c/0.14.0: Main binary package '8631cf963dbbb4d7a378a64a6fd1dc57558bc2fe' missing
+rabbitmq-c/0.14.0: Checking 11 compatible configurations
+rabbitmq-c/0.14.0: Compatible configurations not found in cache, checking servers
+rabbitmq-c/0.14.0: 'dfc5badb0f329a5d97b9043c8ece9ae4b2fb4373': compiler.cppstd=98
+rabbitmq-c/0.14.0: '2e8a5d9179d61fb41adfcb6f39deb667c67ad5ff': compiler.cppstd=gnu98
+rabbitmq-c/0.14.0: '51ede47d8b958f4d476f9e327b0cf6c475a9d34b': compiler.cppstd=11
+rabbitmq-c/0.14.0: '9c2f25d016393b8d4be76305d23f60f457cc5612': compiler.cppstd=gnu11
+rabbitmq-c/0.14.0: 'c01616259c2d166eadec282346c9fb6dce0e3530': compiler.cppstd=14
+rabbitmq-c/0.14.0: '99c9bcacb68e3379fad0ffaab3c0268baafd0cd2': compiler.cppstd=gnu14
+rabbitmq-c/0.14.0: '13be611585c95453f1cbbd053cea04b3e64470ca': compiler.cppstd=17
+rabbitmq-c/0.14.0: 'bae15fe2a033f3b370a343aa4f5335d1ef19168c': compiler.cppstd=20
+rabbitmq-c/0.14.0: 'a4d5d27308bbeba40a02a749e670d8db46a4c930': compiler.cppstd=gnu20
+rabbitmq-c/0.14.0: 'f4cfbd84f61d0dc404ac981f387b5e73a41c7ad5': compiler.cppstd=23
+rabbitmq-c/0.14.0: 'ccb563b6febf0245525eb9b1ffcfe52efd11c9ac': compiler.cppstd=gnu23
+Requirements
+    rabbitmq-c/0.14.0#084cb096df6de4fd9f8db3d20fc7af4e:8631cf963dbbb4d7a378a64a6fd1dc57558bc2fe - Build
+
+======== Installing packages ========
+
+-------- Installing package rabbitmq-c/0.14.0 (1 of 1) --------
+rabbitmq-c/0.14.0: Building from source
+rabbitmq-c/0.14.0: Package rabbitmq-c/0.14.0:8631cf963dbbb4d7a378a64a6fd1dc57558bc2fe
+rabbitmq-c/0.14.0: Copying sources to build folder
+rabbitmq-c/0.14.0: Building your package in /home/fowzis/.conan2/p/b/rabbi3525e963db04d/b
+rabbitmq-c/0.14.0: Calling generate()
+rabbitmq-c/0.14.0: Generators folder: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/b
+rabbitmq-c/0.14.0: CMakeToolchain generated: conan_toolchain.cmake
+rabbitmq-c/0.14.0: CMakeToolchain generated: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/b/CMakePresets.json
+rabbitmq-c/0.14.0: Generating aggregated env files
+rabbitmq-c/0.14.0: Generated aggregated env files: ['conanbuild.sh', 'conanrun.sh']
+rabbitmq-c/0.14.0: Calling build()
+rabbitmq-c/0.14.0: Running CMake.configure()
+rabbitmq-c/0.14.0: RUN: cmake -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE="conan_toolchain.cmake" -DCMAKE_INSTALL_PREFIX="/home/fowzis/.conan2/p/b/rabbi3525e963db04d/p" -DCMAKE_POLICY_DEFAULT_CMP0091="NEW" -DCMAKE_BUILD_TYPE="Release" -DBUILD_SHARED_LIBS="ON" "/home/fowzis/.conan2/p/b/rabbi3525e963db04d/b"
+-- Using Conan toolchain: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/b/conan_toolchain.cmake
+-- Conan toolchain: Setting CMAKE_POSITION_INDEPENDENT_CODE=ON (options.fPIC)
+-- Conan toolchain: Defining architecture flag: -m64
+-- Conan toolchain: C++ Standard 17 with extensions ON
+-- Conan toolchain: Setting BUILD_SHARED_LIBS = OFF
+-- The C compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Looking for getaddrinfo
+-- Looking for getaddrinfo - found
+-- Looking for socket
+-- Looking for socket - found
+-- Looking for poll
+-- Looking for poll - found
+-- Looking for clock_gettime in rt
+-- Looking for clock_gettime in rt - found
+-- Looking for posix_spawnp in rt
+-- Looking for posix_spawnp in rt - found
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Looking for ENGINE_new
+-- Looking for ENGINE_new - found
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Failed
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+-- Building rabbitmq as a shared library - yes
+-- Building rabbitmq as a static library - yes
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/b
+
+rabbitmq-c/0.14.0: Running CMake.build()
+rabbitmq-c/0.14.0: RUN: cmake --build "/home/fowzis/.conan2/p/b/rabbi3525e963db04d/b" -- -j16
+[ 13%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_connection.c.o
+[ 13%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_api.c.o
+[ 13%] Building C object librabbitmq/CMakeFiles/rabbitmq.dir/amqp_connection.c.o
+[ 36%] Building C object librabbitmq/CMakeFiles/rabbitmq.dir/amqp_mem.c.o
+[ 13%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_consumer.c.o
+[ 13%] Building C object librabbitmq/CMakeFiles/rabbitmq.dir/amqp_api.c.o
+[ 36%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_openssl.c.o
+[ 36%] Building C object librabbitmq/CMakeFiles/rabbitmq.dir/amqp_openssl.c.o
+[ 36%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_framing.c.o
+[ 36%] Building C object librabbitmq/CMakeFiles/rabbitmq.dir/amqp_framing.c.o
+[ 36%] Building C object librabbitmq/CMakeFiles/rabbitmq.dir/amqp_consumer.c.o
+[ 36%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_openssl_bio.c.o
+[ 36%] Building C object librabbitmq/CMakeFiles/rabbitmq.dir/amqp_openssl_bio.c.o
+[ 39%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_socket.c.o
+[ 36%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_mem.c.o
+[ 42%] Building C object librabbitmq/CMakeFiles/rabbitmq.dir/amqp_socket.c.o
+[ 44%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_table.c.o
+[ 47%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_tcp_socket.c.o
+[ 50%] Building C object librabbitmq/CMakeFiles/rabbitmq.dir/amqp_table.c.o
+[ 52%] Building C object librabbitmq/CMakeFiles/rabbitmq.dir/amqp_tcp_socket.c.o
+[ 55%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_time.c.o
+[ 57%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_url.c.o
+[ 60%] Building C object librabbitmq/CMakeFiles/rabbitmq.dir/amqp_time.c.o
+[ 63%] Building C object librabbitmq/CMakeFiles/rabbitmq.dir/amqp_url.c.o
+[ 65%] Linking C static library librabbitmq.a
+[ 68%] Linking C shared library librabbitmq.so
+[ 68%] Built target rabbitmq-static
+[ 71%] Building C object tests/CMakeFiles/test_tables.dir/test_tables.c.o
+[ 73%] Building C object tests/CMakeFiles/test_status_enum.dir/test_status_enum.c.o
+[ 76%] Building C object tests/CMakeFiles/test_parse_url.dir/test_parse_url.c.o
+[ 78%] Building C object tests/CMakeFiles/test_sasl_mechanism.dir/test_sasl_mechanism.c.o
+[ 81%] Building C object tests/CMakeFiles/test_basic.dir/test_basic.c.o
+[ 84%] Building C object tests/CMakeFiles/test_merge_capabilities.dir/test_merge_capabilities.c.o
+[ 86%] Linking C executable test_status_enum
+[ 89%] Linking C executable test_sasl_mechanism
+[ 92%] Linking C executable test_parse_url
+[ 94%] Linking C executable test_basic
+[ 97%] Linking C executable test_merge_capabilities
+[100%] Linking C executable test_tables
+[100%] Built target rabbitmq
+[100%] Built target test_status_enum
+[100%] Built target test_sasl_mechanism
+[100%] Built target test_parse_url
+[100%] Built target test_basic
+[100%] Built target test_merge_capabilities
+[100%] Built target test_tables
+
+rabbitmq-c/0.14.0: Running CMake.install()
+rabbitmq-c/0.14.0: RUN: cmake --install "/home/fowzis/.conan2/p/b/rabbi3525e963db04d/b" --prefix "/home/fowzis/.conan2/p/b/rabbi3525e963db04d/p"
+-- Install configuration: "Release"
+-- Installing: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/lib/librabbitmq.so.0.15.0
+-- Installing: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/lib/librabbitmq.so.4
+-- Set runtime path of "/home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/lib/librabbitmq.so.0.15.0" to "$ORIGIN"
+-- Installing: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/lib/librabbitmq.so
+-- Installing: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/lib/librabbitmq.a
+-- Installing: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/include/amqp.h
+-- Installing: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/include/amqp_framing.h
+-- Installing: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/include/amqp_tcp_socket.h
+-- Installing: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/include/amqp_ssl_socket.h
+-- Installing: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/include/rabbitmq-c/amqp.h
+-- Installing: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/include/rabbitmq-c/framing.h
+-- Installing: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/include/rabbitmq-c/tcp_socket.h
+-- Installing: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/include/rabbitmq-c/ssl_socket.h
+-- Installing: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/include/rabbitmq-c/export.h
+-- Installing: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/lib/cmake/rabbitmq-c/rabbitmq-c-config.cmake
+-- Installing: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/lib/cmake/rabbitmq-c/rabbitmq-c-config-version.cmake
+-- Installing: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/lib/cmake/rabbitmq-c/rabbitmq-targets.cmake
+-- Installing: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/lib/cmake/rabbitmq-c/rabbitmq-targets-release.cmake
+-- Installing: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/lib/pkgconfig/librabbitmq.pc
+
+rabbitmq-c/0.14.0: Running CMake.configure()
+rabbitmq-c/0.14.0: RUN: cmake -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE="conan_toolchain.cmake" -DCMAKE_INSTALL_PREFIX="/home/fowzis/.conan2/p/b/rabbi3525e963db04d/p" -DCMAKE_POLICY_DEFAULT_CMP0091="NEW" -DCMAKE_BUILD_TYPE="Release" -DBUILD_SHARED_LIBS="OFF" "/home/fowzis/.conan2/p/b/rabbi3525e963db04d/b"
+-- Using Conan toolchain: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/b/conan_toolchain.cmake
+-- Conan toolchain: Setting CMAKE_POSITION_INDEPENDENT_CODE=ON (options.fPIC)
+-- Conan toolchain: Defining architecture flag: -m64
+-- Conan toolchain: C++ Standard 17 with extensions ON
+-- Conan toolchain: Setting BUILD_SHARED_LIBS = OFF
+-- Building rabbitmq as a shared library - no
+-- Building rabbitmq as a static library - yes
+-- Configuring done
+-- Generating done
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_TOOLCHAIN_FILE
+
+
+-- Build files have been written to: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/b
+
+rabbitmq-c/0.14.0: Running CMake.build()
+rabbitmq-c/0.14.0: RUN: cmake --build "/home/fowzis/.conan2/p/b/rabbi3525e963db04d/b" -- -j16
+Consolidate compiler generated dependencies of target rabbitmq-static
+[ 12%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_mem.c.o
+[ 12%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_api.c.o
+[ 12%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_connection.c.o
+[ 20%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_framing.c.o
+[ 20%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_consumer.c.o
+[ 24%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_openssl.c.o
+[ 28%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_openssl_bio.c.o
+[ 32%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_url.c.o
+[ 36%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_socket.c.o
+[ 40%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_table.c.o
+[ 44%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_tcp_socket.c.o
+[ 48%] Building C object librabbitmq/CMakeFiles/rabbitmq-static.dir/amqp_time.c.o
+[ 52%] Linking C static library librabbitmq.a
+[ 52%] Built target rabbitmq-static
+Consolidate compiler generated dependencies of target test_status_enum
+Consolidate compiler generated dependencies of target test_basic
+Consolidate compiler generated dependencies of target test_merge_capabilities
+Consolidate compiler generated dependencies of target test_tables
+Consolidate compiler generated dependencies of target test_parse_url
+Consolidate compiler generated dependencies of target test_sasl_mechanism
+[ 64%] Building C object tests/CMakeFiles/test_basic.dir/test_basic.c.o
+[ 64%] Building C object tests/CMakeFiles/test_status_enum.dir/test_status_enum.c.o
+[ 64%] Building C object tests/CMakeFiles/test_tables.dir/test_tables.c.o
+[ 68%] Building C object tests/CMakeFiles/test_parse_url.dir/test_parse_url.c.o
+[ 72%] Building C object tests/CMakeFiles/test_merge_capabilities.dir/test_merge_capabilities.c.o
+[ 76%] Building C object tests/CMakeFiles/test_sasl_mechanism.dir/test_sasl_mechanism.c.o
+[ 80%] Linking C executable test_status_enum
+[ 84%] Linking C executable test_sasl_mechanism
+[ 88%] Linking C executable test_parse_url
+[ 92%] Linking C executable test_merge_capabilities
+[ 96%] Linking C executable test_basic
+[100%] Linking C executable test_tables
+[100%] Built target test_status_enum
+[100%] Built target test_sasl_mechanism
+[100%] Built target test_basic
+[100%] Built target test_merge_capabilities
+[100%] Built target test_parse_url
+[100%] Built target test_tables
+
+rabbitmq-c/0.14.0: Running CMake.install()
+rabbitmq-c/0.14.0: RUN: cmake --install "/home/fowzis/.conan2/p/b/rabbi3525e963db04d/b" --prefix "/home/fowzis/.conan2/p/b/rabbi3525e963db04d/p"
+-- Install configuration: "Release"
+-- Installing: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/lib/librabbitmq.a
+-- Up-to-date: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/include/amqp.h
+-- Up-to-date: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/include/amqp_framing.h
+-- Up-to-date: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/include/amqp_tcp_socket.h
+-- Up-to-date: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/include/amqp_ssl_socket.h
+-- Up-to-date: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/include/rabbitmq-c/amqp.h
+-- Up-to-date: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/include/rabbitmq-c/framing.h
+-- Up-to-date: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/include/rabbitmq-c/tcp_socket.h
+-- Up-to-date: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/include/rabbitmq-c/ssl_socket.h
+-- Installing: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/include/rabbitmq-c/export.h
+-- Up-to-date: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/lib/cmake/rabbitmq-c/rabbitmq-c-config.cmake
+-- Up-to-date: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/lib/cmake/rabbitmq-c/rabbitmq-c-config-version.cmake
+-- Old export file "/home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/lib/cmake/rabbitmq-c/rabbitmq-targets.cmake" will be replaced.  Removing files [/home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/lib/cmake/rabbitmq-c/rabbitmq-targets-release.cmake].
+-- Installing: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/lib/cmake/rabbitmq-c/rabbitmq-targets.cmake
+-- Installing: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/lib/cmake/rabbitmq-c/rabbitmq-targets-release.cmake
+-- Up-to-date: /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p/lib/pkgconfig/librabbitmq.pc
+
+rabbitmq-c/0.14.0: Package '8631cf963dbbb4d7a378a64a6fd1dc57558bc2fe' built
+rabbitmq-c/0.14.0: Build folder /home/fowzis/.conan2/p/b/rabbi3525e963db04d/b
+rabbitmq-c/0.14.0: Generating the package
+rabbitmq-c/0.14.0: Packaging in folder /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p
+rabbitmq-c/0.14.0: Calling package()
+rabbitmq-c/0.14.0: package(): Packaged 9 '.h' files
+rabbitmq-c/0.14.0: package(): Packaged 1 '.0' file: librabbitmq.so.0.15.0
+rabbitmq-c/0.14.0: package(): Packaged 1 '.4' file: librabbitmq.so.4
+rabbitmq-c/0.14.0: package(): Packaged 1 '.a' file: librabbitmq.a
+rabbitmq-c/0.14.0: package(): Packaged 1 '.so' file: librabbitmq.so
+rabbitmq-c/0.14.0: package(): Packaged 1 '.pc' file: librabbitmq.pc
+rabbitmq-c/0.14.0: package(): Packaged 4 '.cmake' files: rabbitmq-targets-release.cmake, rabbitmq-c-config.cmake, rabbitmq-targets.cmake, rabbitmq-c-config-version.cmake
+rabbitmq-c/0.14.0: Created package revision c44f21533fd8d5461761b1c571314019
+rabbitmq-c/0.14.0: Package '8631cf963dbbb4d7a378a64a6fd1dc57558bc2fe' created
+rabbitmq-c/0.14.0: Full package reference: rabbitmq-c/0.14.0#084cb096df6de4fd9f8db3d20fc7af4e:8631cf963dbbb4d7a378a64a6fd1dc57558bc2fe#c44f21533fd8d5461761b1c571314019
+rabbitmq-c/0.14.0: Package folder /home/fowzis/.conan2/p/b/rabbi3525e963db04d/p
