@@ -91,6 +91,39 @@ Other interesting flags that can be passed to CMake:
 * `RUN_SYSTEM_TESTS=ON/OFF` toggles building the system tests (i.e. tests requiring 
    an accessible RabbitMQ server instance on localhost), by default this is OFF
 
+## Building RabbitMQ - Using Conan v2+
+After clonin this branch, a new file ```conanfile.py``` will be added on top of the files from the master repo
+Build and create the Conan v2+ package as follows:
+
+```
+conan create . --name rabbitmq-c --version 0.14.0 --user <your user> --channel <your channel> 2>&1 | tee rabbitmqcConan_create_log.txt
+```
+
+To upload the created package to your remote center
+```
+conan upload rabbitmq-c/0.14.0@user/channel --remote=my_remote --all
+```
+
+Deploy the Package:
+Once the package is built, you can use it in your projects by adding it to your conanfile.txt or conanfile.py as a dependency.
+Here’s an example conanfile.txt for a project that uses the rabbitmq-c package:
+
+[requires]
+rabbitmq-c/0.14.0
+
+[generators]
+cmake
+
+Using the Package:
+In your CMakeLists.txt, you can link against the rabbitmq-c library:
+find_package(rabbitmq-c REQUIRED)
+target_link_libraries(your_target PRIVATE rabbitmq)
+
+
+
+
+
+
 ## Building RabbitMQ - Using vcpkg
 
 You can download and install RabbitMQ using the [vcpkg](https://github.com/Microsoft/vcpkg) 
